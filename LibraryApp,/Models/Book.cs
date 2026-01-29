@@ -1,26 +1,21 @@
 ﻿using LibraryApp;
 using System;
 
-namespace LibraryApp
+namespace LibraryApp.Models
 {
-    class Program
+    public class Book : LibraryItem
     {
-        static void Main(string[] args)
-        {
-            try
-            {
-                Book book1 = new Book("1984", "Дж. Оруэлл", 1949);
-                Book book2 = new Book("Гарри Поттер", "Дж. Роулинг", 1997);
-                Book book3 = new Book("Мастер и Маргарита", "М. Булгаков", 1967);
+        public int Pages { get; set; }
 
-                book1.DisplayInfo();
-                book2.DisplayInfo();
-                book3.DisplayInfo();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-            }
+        public Book(string title, string author, int year, int pages)
+            : base(title, author, year)
+        {
+            Pages = pages;
+        }
+
+        public override void DisplayInfo()
+        {
+            Console.WriteLine($"Книга: {Title} / {Author} ({Year}) — {Pages} стр.");
         }
     }
 }
