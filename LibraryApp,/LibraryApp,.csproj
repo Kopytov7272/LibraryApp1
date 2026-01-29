@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\IBorrowable.cs" />
     <Compile Include="Models\Magazine.cs" />
     <Compile Include="Models\LibraryItem.cs" />
     <Compile Include="Program.cs" />
