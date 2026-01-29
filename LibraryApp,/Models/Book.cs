@@ -1,16 +1,26 @@
-﻿using System;
+﻿using LibraryApp;
+using System;
 
-namespace LibraryApp.Models
+namespace LibraryApp
 {
-    public class Book
+    class Program
     {
-        public string Title;
-        public string Author;
-        public int Year;
-
-        public void DisplayInfo()
+        static void Main(string[] args)
         {
-            Console.WriteLine($"Название: {Title}, Автор: {Author}, Год: {Year}");
+            try
+            {
+                Book book1 = new Book("1984", "Дж. Оруэлл", 1949);
+                Book book2 = new Book("Гарри Поттер", "Дж. Роулинг", 1997);
+                Book book3 = new Book("Мастер и Маргарита", "М. Булгаков", 1967);
+
+                book1.DisplayInfo();
+                book2.DisplayInfo();
+                book3.DisplayInfo();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка: {ex.Message}");
+            }
         }
     }
 }
