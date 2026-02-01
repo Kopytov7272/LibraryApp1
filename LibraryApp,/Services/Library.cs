@@ -28,5 +28,20 @@ namespace LibraryApp.Services
                 .Select(b => b.Title)
                 .ToList();
         }
+
+        internal void BorrowItem(object item, string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal IEnumerable<object> FindByAuthor(string author)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object FindItemByTitle(string title)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
